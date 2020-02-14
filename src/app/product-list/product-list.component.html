@@ -9,7 +9,7 @@
 
   <h3>
     
-    <a [title]="product.name + ' details'">
+    <a [title]="product.name + ' details'" [routerLink]="['/products', productId]"> 
       {{ product.name}}
       <!-- {{ }} are interpolation syntax for rendering a properties value -->
       
