@@ -1,6 +1,11 @@
 <h2>Products</h2>
 
-<div *ngFor="let product of products">  <!-- *ngFor is a structural directive.  This allows it to shape or reshape the DOM's structure -->
+<div *ngFor="let product of products">  <!-- *ngFor is a structural directive.  This allows it to shape or reshape the DOM's structure
+  "let product of products" breakdown:
+    "let product" creates a local variable called product that operates in this components scope.
+    "products" refers to the array that the information and products are stored.
+    "of products" allows it to iterate of the product array.
+  -->
 
   <h3>
     
