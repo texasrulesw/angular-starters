@@ -2,17 +2,23 @@
 
 <div *ngFor="let product of products">  <!-- *ngFor is a structural directive.  This allows it to shape or reshape the DOM's structure -->
 
-<h3>
-  
-  <a [title]="product.name + ' details'">
-    {{ product.name}}
-    <!-- {{ }} are interpolation syntax for printing something onscreen. -->
+  <h3>
     
-    <!-- [ ] is the property binding expression and is used inside of the template in this case. -->
-  </a>
+    <a [title]="product.name + ' details'">
+      {{ product.name}}
+      <!-- {{ }} are interpolation syntax for rendering a properties value -->
+      
+      <!-- [ ] is the property binding expression and is used inside of the template in this case. -->
+    </a>
 
+    
+  </h3>
+
+  <p *ngIf="product.description">
   
-</h3>
+    Description:  {{product.description}}
+
+  </p>
 
 </div>
 
