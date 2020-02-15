@@ -29,6 +29,7 @@ export class ProductDetailsComponent implements OnInit {
     //it pushes the product to the items array.
 
     window.alert('Your product has been added to the cart!');
+    {{items}}
   }
 
 }
