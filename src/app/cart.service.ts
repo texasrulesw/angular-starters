@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -24,6 +25,8 @@ export class CartService {
     //this method returns an empty array of items//
   }
 
-  constructor() { }
+  constructor(
+    private http: HttpClient
+  ) { }
 
 }
