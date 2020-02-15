@@ -13,16 +13,17 @@ export class CartService {
     this.items.push(product);
     //this method is to add product to the array "items"//
   }
-
   getItems(){
     return this.items;
     //this method collects the user products and quantity//
   }
-
   clearCart(){
     this.items = [];
     return this.items;
     //this method returns an empty array of items//
+  }
+  getShippingPrices(){
+    return this.http.get('assets/shipping.json');
   }
 
   constructor(
