@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+//FormBuilder is already brought in by the app.module.ts in ReactiveFormsModule
+
 
 import { CartService } from '../cart.service';
 
@@ -15,8 +17,10 @@ export class CartComponent implements OnInit {
 
   constructor(
     
-    private cartService: CartService
+    private cartService: CartService,
     //this is injecting cartService into the component to be used
+    private formBuilder: FormBuilder,
+    //inject FormBuilder into the component to be used.
 
   ) { }
 
