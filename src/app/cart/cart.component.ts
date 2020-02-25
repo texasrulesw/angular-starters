@@ -14,6 +14,7 @@ import { CartService } from '../cart.service';
 export class CartComponent implements OnInit {
 
   items; //defining items property
+  checkoutForm; //defines the form property
 
   constructor(
     
@@ -22,7 +23,13 @@ export class CartComponent implements OnInit {
     private formBuilder: FormBuilder,
     //inject FormBuilder into the component to be used.
 
-  ) { }
+  ) { 
+    this.checkoutForm = this.formBuilder.group({  //this is a method
+      name: '',
+      address:'',
+    });
+
+  }
 
   ngOnInit() {
     this.items = this.cartService.getItems();
